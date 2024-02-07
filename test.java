@@ -19,28 +19,33 @@ public class ArrayOperations {
             System.out.print("Enter your choice: ");
             
             choice = scanner.nextInt();
-            switch (choice) {
-                case 1:
+            if choice == 1
+                {
                     System.out.print("Enter array size: ");
                     int size = scanner.nextInt();
                     createRandomArray(size);
-                    break;
-                case 2:
+                }
+            else if choice == 2
+                {
                     findMinMax();
-                    break;
-                case 3:
+                }
+            else if choice == 3
+                {
                     findAverageAndDifferences();
-                    break;
-                case 4:
+                }
+            else if choice == 4
+                {
                     findSumOfIndexes();
-                    break;
-                case 5:
+                }
+            else if choice == 5
+                {
                     System.out.println("Exiting...");
-                    break;
-                default:
+                }
+            else
+                {
                     System.out.println("Invalid choice. Please try again.");
-            }
-        } while (choice != 5);
+                }
+        while (choice != 5);
         
         scanner.close();
     }
